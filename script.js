@@ -85,6 +85,11 @@ function processDialogue(index) {
             // Display output instantly after delay
             addOutput(dialogue.text);
             processDialogue(index + 1); // Move to the next dialogue
+            if (dialogue.text === "Starting GUI session and redirecting...") {
+                setTimeout(() => {
+                    window.location.href = "home.html"; // Redirect to home.html
+                }, 3400); // Optional delay for better UX
+            }
         }
     }
 }
