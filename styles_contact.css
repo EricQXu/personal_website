@@ -5,6 +5,16 @@
     font-family: "JetBrains Mono", monospace;
 }
 
+::selection {
+    background-color: #cfeac6;
+    color: #ffffff;
+}
+  
+::-moz-selection {
+    background-color: #cfeac6;
+    color: #ffffff;
+}
+
 /* For screens 720px or wider */
 @media screen and (min-width: 720px) {
     body {

@@ -5,6 +5,16 @@
     font-family: "JetBrains Mono", monospace;
 }
 
+::selection {
+    background-color: #cfeac6;
+    color: #ffffff;
+}
+  
+::-moz-selection {
+    background-color: #cfeac6;
+    color: #ffffff;
+}
+
 .back-button {
     padding: 10px 20px;
     font-size: 16px;
