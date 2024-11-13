@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
+
+* {
+    background-color: #1d1d2c;
+    font-family: "JetBrains Mono", monospace;
+}
+
+/* For screens 720px or wider */
+@media screen and (min-width: 720px) {
+    body {
+        margin: 80px;
+}
+
+/* For screens narrower than 720px */
+@media screen and (max-width: 719px) {   
+    body {
+        margin: 50px;
+    }
+}
+
+.back-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #000;
+    background-color: #fff;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+    transition: box-shadow 0.3s, transform 0.3s;
+}
+
+.back-button:hover {
+    box-shadow: 0 0 15px 5px rgba(0, 255, 255, 0.7), 0 0 15px 5px rgba(255, 0, 255, 0.7), 0 0 15px 5px rgba(255, 255, 0, 0.7);
+    transform: scale(1.1);
+}
+
+.back-button:active {
+    transform: scale(0.95);
+}
+
+h1 {
+    font-size: 40px;
+    color: #00ff00;
+}
+
+p {
+    font-size: 18px;
+    color: white;
+    line-height: 2;
+}
