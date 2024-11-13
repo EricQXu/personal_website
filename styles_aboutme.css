@@ -5,10 +5,6 @@
     font-family: "JetBrains Mono", monospace;
 }
 
-body {
-    margin: 80px;
-}
-
 .back-button {
     padding: 10px 20px;
     font-size: 16px;
@@ -54,12 +50,41 @@ p {
     gap: 20px;
 }
 
+/* Ensure image placement and scaling */
 .profile-pic {
     max-width: 720px;
     max-height: 540px;
     border-radius: 10px;
-    margin-right: 20px;
+    margin-right: 100px;
     flex-shrink: 0;
+    width: 100%; /* Default width for scaling */
+    height: auto; /* Maintain aspect ratio */
+}
+
+/* For screens 720px or wider */
+@media screen and (min-width: 720px) {
+    body {
+        margin: 80px;
+    }
+    .profile-pic {
+        width: 720px;
+        height: 520px;
+    }
+}
+
+/* For screens narrower than 720px */
+@media screen and (max-width: 719px) {   
+    body {
+        margin: 50px;
+    } 
+    .profile-pic {
+        width: calc(100vw - 100px); /* 100px less than screen width */
+        height: auto; /* Maintain 4:3 aspect ratio */
+        aspect-ratio: 4 / 3; /* Set aspect ratio explicitly */
+
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
 }
 
 .text-content {
