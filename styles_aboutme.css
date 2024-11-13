@@ -5,14 +5,75 @@
     font-family: "JetBrains Mono", monospace;
 }
 
+body {
+    margin: 80px;
+}
+
+.back-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #000;
+    background-color: #fff;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+    transition: box-shadow 0.3s, transform 0.3s;
+}
+
+.back-button:hover {
+    box-shadow: 0 0 15px 5px rgba(0, 255, 255, 0.7), 0 0 15px 5px rgba(255, 0, 255, 0.7), 0 0 15px 5px rgba(255, 255, 0, 0.7);
+    transform: scale(1.1);
+}
+
+.back-button:active {
+    transform: scale(0.95);
+}
+
 .name {
     color: cyan;
 }
 
 h1 {
+    font-size: 40px;
     color: #00ff00;
 }
 
 p {
+    font-size: 18px;
     color: white;
+    margin-bottom: 2em; /* Adds space between paragraphs */
+    line-height: 2;
+}
+
+.content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.profile-pic {
+    max-width: 720px;
+    max-height: 540px;
+    border-radius: 10px;
+    margin-right: 20px;
+    flex-shrink: 0;
+}
+
+.text-content {
+    flex: 1;
+}
+
+@media screen and (max-width: 600px) {
+    .content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .profile-pic {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
 }

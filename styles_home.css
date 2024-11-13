@@ -4,7 +4,7 @@ body {
     margin: 0;
     padding: 0;
     background-color: #1c1c28;
-    color: #ffff00;
+    color: white;
     font-family: "JetBrains Mono", monospace;
     display: flex;
     justify-content: center;
@@ -17,6 +17,10 @@ body {
     max-width: 600px;
   }
   
+  #tips {
+    color: #54a6f9;
+  }
+
   h1 {
     color: #00ff00;
     margin-bottom: 20px;

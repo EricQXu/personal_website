@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
+
+* {
+    background-color: #1c1c28;
+    font-family: "JetBrains Mono", monospace;
+    margin: 0; /* Reset default margins */
+    padding: 0; /* Reset default paddings */
+    box-sizing: border-box; /* Ensure padding doesn't affect width */
+}
+
+body {
+    margin: 0; /* Remove the browser's default margin */
+    display: flex; /* Use flexbox to center content */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    height: 100vh; /* Set height to fill the viewport */
+    text-align: center; /* Center text inside body */
+}
+
+h1 {
+    color: white;
+    font-size: 25px; /* Use `font-size` for size control */
+}
