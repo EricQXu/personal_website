@@ -6,20 +6,14 @@ const cursorElement = document.querySelector(".cursor");
 // Define the dialogue sequence exactly as specified
 const dialogues = [
     { type: "input", text: "q&a 'who are you?'" },
-    { type: "output", text: "Hi, I'm Eric Qiang Xu! \npsst...for more info about q&a, see man q&a" },
-    { type: "input", text: "q&a 'which uni?'" },
-    { type: "output", text: "University of California, Santa Cruz" },
-    { type: "input", text: "q&a 'what major?'" },
-    { type: "output", text: "It's in the key of C major or A minor. I'm kidding. I'm an Applied Mathematics, B.S. major." },
-    { type: "input", text: "q&a 'class of?'" },
-    { type: "output", text: "2027" },
+    { type: "output", text: "Hi, I'm Eric Qiang Xu, a UCSC applied mathematics undergrad! \npsst...for more info about q&a, see man q&a" },
     { type: "input", text: "q&a 'tell me more about yourself'" },
     { type: "output", text: "Hmm, this one needs a GUI to show up properly." },
     { type: "output", text: "Detecting display server..." },
     { type: "output", text: "Display server detected: Wayland" },
     { type: "output", text: "Loading GUI modules..." },
     { type: "output", text: "GUI modules loaded successfully." },
-    { type: "output", text: "Starting GUI session and redirecting..." }
+    { type: "output", text: "Starting GUI session and redirecting, please wait..." }
 ];
 
 // Typing speed in milliseconds
@@ -85,10 +79,10 @@ function processDialogue(index) {
             // Display output instantly after delay
             addOutput(dialogue.text);
             processDialogue(index + 1); // Move to the next dialogue
-            if (dialogue.text === "Starting GUI session and redirecting...") {
+            if (dialogue.text === "Starting GUI session and redirecting, please wait...") {
                 setTimeout(() => {
                     window.location.href = "home.html"; // Redirect to home.html
-                }, 3400); // Optional delay for better UX
+                }, 2550); // Optional delay for better UX
             }
         }
     }
